@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Itaewon & Co. POS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span>&amp;</span><div><b>ITAEWON & CO.</b><small>POINT OF SALE</small></div></div>
+    <nav>
+      <button data-page="pos" class="active">POS / Checkout</button>
+      <button data-page="products">Products</button>
+      <button data-page="inventory">Inventory</button>
+      <button data-page="sales">Sales Reports</button>
+      <button data-page="expenses">Expenses</button>
+      <button data-page="settings">Backup / Settings</button>
+    </nav>
+    <small class="foot">LOCAL POS SYSTEM</small>
+  </aside>
+
+  <main>
+    <header><div><small>STORE MANAGEMENT</small><h1 id="title">POS / Checkout</h1></div><span id="date"></span></header>
+    <div id="app"></div>
+  </main>
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

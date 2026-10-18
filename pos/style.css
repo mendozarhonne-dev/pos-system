@@ -1,0 +1,89 @@
+
+:root {
+  --dark:#29241f; --accent:#a85c3b; --paper:#f7f5f0;
+  --line:#e8e2d9; --muted:#817970;
+}
+* { box-sizing:border-box }
+body { margin:0; background:var(--paper); color:var(--dark);
+  font:14px Arial,sans-serif; display:flex; min-height:100vh }
+button,input,select { font:inherit }
+button { cursor:pointer }
+.sidebar { width:225px; flex-shrink:0; background:var(--dark);
+  color:white; padding:24px 14px; display:flex; flex-direction:column }
+.brand { display:flex; align-items:center; gap:12px; padding:5px 5px 28px }
+.brand span { font:italic 48px Georgia; color:#e7b28e }
+.brand b,.brand small { display:block }
+.brand b { letter-spacing:1px; font-size:12px }
+.brand small { color:#bcb0a4; font-size:9px; margin-top:5px; letter-spacing:2px }
+nav { display:grid; gap:7px }
+nav button { background:none; border:0; color:#c9bfb4; padding:13px;
+  text-align:left; border-radius:8px }
+nav button.active,nav button:hover { background:#44372e; color:white }
+.foot { margin-top:auto; color:#a89b8e; padding:20px 5px 0 }
+main { flex:1; min-width:0; padding:28px; max-width:1600px; margin:auto; width:100% }
+header { display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:24px; gap:12px }
+header small { color:var(--accent); letter-spacing:2px; font-weight:bold }
+h1 { margin:7px 0 0; font-size:28px }
+h2 { font-size:16px; margin:0 0 16px }
+.panel { background:white; border:1px solid var(--line);
+  border-radius:13px; padding:18px; min-width:0 }
+.layout { display:grid; grid-template-columns:1.4fr 1fr; gap:18px }
+.row { display:flex; justify-content:space-between; align-items:center; gap:10px }
+input,select { border:1px solid var(--line); border-radius:8px;
+  padding:11px; background:white; width:100%; min-width:0 }
+.field { margin:12px 0 }
+.field label { display:block; font-size:11px; font-weight:bold;
+  color:var(--muted); margin-bottom:6px }
+.search { margin-bottom:12px }
+.categories { display:flex; gap:7px; flex-wrap:wrap; margin-bottom:14px }
+.chip { border:1px solid var(--line); background:white; padding:8px 12px;
+  border-radius:20px }
+.chip.active { background:var(--dark); color:white }
+.products { display:grid; grid-template-columns:repeat(auto-fill,minmax(125px,1fr)); gap:10px }
+.product { background:#fffaf5; border:1px solid var(--line); border-radius:10px;
+  padding:13px; text-align:left; min-height:100px }
+.product:hover { border-color:var(--accent) }
+.product b,.product small { display:block; margin-bottom:8px }
+.product small,.muted { color:var(--muted) }
+.price { color:var(--accent); font-size:16px; font-weight:bold }
+.cart-item { display:flex; align-items:center; justify-content:space-between;
+  gap:8px; padding:12px 0; border-bottom:1px solid var(--line) }
+.qty { display:flex; align-items:center; gap:8px }
+.qty button { background:white; border:1px solid var(--line);
+  border-radius:6px; padding:5px 10px }
+.totals { border-top:1px solid var(--line); margin-top:15px; padding-top:14px }
+.total-row { display:flex; justify-content:space-between; margin:9px 0 }
+.grand { font-size:21px; font-weight:bold }
+.btn { border:0; border-radius:8px; padding:11px 14px; font-weight:bold }
+.primary { background:var(--accent); color:white }
+.secondary { background:#f0ebe5; color:var(--dark) }
+.full { width:100%; margin-top:12px }
+button:disabled { opacity:.45; cursor:not-allowed }
+.metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px; margin-bottom:16px }
+.metric { background:white; border:1px solid var(--line); border-radius:12px; padding:16px }
+.metric small { display:block; color:var(--muted) }
+.metric strong { display:block; font-size:23px; margin-top:8px }
+table { border-collapse:collapse; width:100%; min-width:500px }
+th,td { padding:12px 9px; border-bottom:1px solid var(--line); text-align:left; font-size:12px }
+th { color:var(--muted) }
+.table-wrap { overflow:auto }
+.notice { background:#fbf1e8; padding:12px; border-radius:8px; margin-bottom:15px }
+.empty { color:var(--muted); padding:22px 0; text-align:center }
+#toast { position:fixed; bottom:20px; right:20px; background:var(--dark);
+  color:white; padding:12px 16px; border-radius:8px; opacity:0; transition:.2s }
+#toast.show { opacity:1 }
+@media(max-width:800px) {
+  body { display:block }
+  .sidebar { width:100%; padding:12px }
+  .brand { padding:0 5px 12px }
+  .brand span { font-size:32px }
+  nav { display:flex; overflow-x:auto }
+  nav button { white-space:nowrap; padding:10px }
+  .foot { display:none }
+  main { padding:16px 12px }
+  .layout { grid-template-columns:1fr }
+  .metrics { grid-template-columns:1fr 1fr }
+  h1 { font-size:23px }
+}
